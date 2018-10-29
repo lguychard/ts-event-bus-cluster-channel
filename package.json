@@ -1,0 +1,30 @@
+{
+  "name": "ts-event-bus-cluster-channel",
+  "author": "lguychard",
+  "devDependencies": {
+    "@types/lodash": "^4.14.116",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.11.0",
+    "@types/should": "^13.0.0",
+    "mocha": "^5.2.0",
+    "should": "^13.2.3",
+    "sinon": "^7.0.0",
+    "ts-event-bus": "^1.0.3",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-valorsoft": "^2.2.1",
+    "typescript": "^3.0.3",
+    "@types/sinon": "^5.0.5",
+    "intercept-require": "^1.1.0"
+  },
+  "peerDependencies": {
+    "ts-event-bus": "^1.0.3"
+  },
+  "scripts": {
+    "tslint": "tslint -p tsconfig.json -c tslint.json src/**/*.ts",
+    "test": "mocha --require ts-node/register --inline-diffs --reporter spec --recursive ./src/**/*.test.ts",
+    "build:clean": "rm -rf dist",
+    "build": "yarn build:clean && tsc -p ."
+  },
+  "dependencies": {}
+}
